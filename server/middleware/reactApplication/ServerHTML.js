@@ -71,7 +71,6 @@ function ServerHTML(props) {
     // that we can safely expose some configuration values to the
     // client bundle that gets executed in the browser.
     <ClientConfig nonce={nonce} />,
-
     // Bind our async components state so the client knows which ones
     // to initialise so that the checksum matches the server response.
     // @see https://github.com/ctrlplusb/react-async-component

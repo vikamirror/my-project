@@ -67,6 +67,8 @@ In order to target a specific environment configuration file you have to provide
 ```bash
 npm run build
 DEPLOYMENT=staging npm run start # This will look for a .env.staging file
+yarn run build
+DEPLOYMENT=staging yarn run start # This will look for a .env.staging file
 ```
 
  > Note: you may be used to using NODE_ENV to distinguish between environment configuration, however, when using the React ecosystem it is highly recommended that you set NODE_ENV=production any time you want an optimised version of React (and other libs).  Given this requirement, we instead defer to the use of a "DEPLOYMENT" variable. See [here](https://github.com/facebook/react/issues/6582) for more info on this.

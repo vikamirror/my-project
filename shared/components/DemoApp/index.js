@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 import config from '../../../config';
 
 import './globals.css';
+import styles from './styles.scss';
 
 import Error404 from './Error404';
 import Header from './Header';
@@ -19,23 +20,18 @@ import AsyncAboutRoute from './AsyncAboutRoute';
 
 function DemoApp() {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className={styles.app}>
       <Helmet>
         <html lang="en" />
-        <meta charSet="utf-8" />
-        <title>
-          {config('htmlPage.defaultTitle')}
-        </title>
+        <title>{config('htmlPage.defaultTitle')}</title>
         <meta name="application-name" content={config('htmlPage.defaultTitle')} />
         <meta name="description" content={config('htmlPage.description')} />
+        <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="msapplication-TileColor" content="#2b2b2b" />
         <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
         <meta name="theme-color" content="#2b2b2b" />
-        <title>
-          {config('htmlPage.defaultTitle')}
-        </title>
         {/*
           A great reference for favicons:
           https://github.com/audreyr/favicon-cheat-sheet
@@ -118,7 +114,7 @@ function DemoApp() {
         />
       </Helmet>
       <Header />
-      <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+      <div className={styles.wrapper}>
         <Switch>
           <Route exact path="/" component={AsyncHomeRoute} />
           <Route path="/counter" component={AsyncCounterRoute} />
