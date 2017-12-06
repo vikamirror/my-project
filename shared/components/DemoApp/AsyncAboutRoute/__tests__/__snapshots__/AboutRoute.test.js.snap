@@ -5,6 +5,7 @@ exports[`<AboutRoute /> renders 1`] = `
   classNames="aboutWrapper"
 >
   <HelmetWrapper
+    defer={true}
     encodeSpecialCharacters={true}
   >
     <title>
